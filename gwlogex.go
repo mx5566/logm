@@ -176,6 +176,11 @@ func TraceErrorEx(format string, args ...interface{}) {
 	ErrorfE(format, args...)
 }
 
+func TraceErrorE(args ...interface{}) {
+	ErrorE(string(debug.Stack()))
+	ErrorE(args...)
+}
+
 // SetLevel sets the log level
 func SetLevelEx(lv zapcore.Level) {
 	atom.SetLevel(lv)
