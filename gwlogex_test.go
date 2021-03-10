@@ -7,7 +7,7 @@ func TestGwExLog(t *testing.T) {
 		SetOutputEx(map[string]string{"errFile": "game.log", "logFile": "game_err.log"})
 		SetLevelEx(DebugLevel)*/
 
-	Init("gwexlog_test", map[string]string{"errFile": "game.log", "logFile": "game_err.log"}, "debug")
+	Init("gwexlog_test", map[string]string{"errFile": "game_err.log", "logFile": "game.log"}, "debug")
 
 	DebugfE("this is a debufdE %d", 1)
 	/*SetLevelEx(InfoLevel)
